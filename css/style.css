@@ -1,0 +1,207 @@
+/* resetar o padrao do css */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+html,
+body {
+    /* definir que o tamanho da altura seja do viewport, visao */
+    height: 100vh;
+    font-family: "Source Sans Pro", 'Times New Roman';
+    /*Uso de uma fonte e uma fonte de callback quando nao funciona  */
+    /* ajuda ao texto ficar com facilidade de renderizar */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smootinhg: antialiased;
+    /* serve para evitar o serrilhado dos textos */
+}
+
+header {
+    background-color: #0080ed;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* distribui os espacos nos meios iguais */
+    /* tem os espacos emv volta e o evenly que distribui de acordo com o que tem */
+    max-width: 980px;
+    height: 80px;
+    margin: auto;
+}
+
+header nav ul {
+    display: flex;
+        /* feito para ficar responsivo */
+}
+
+header nav ul li {
+    list-style: none;
+    /* retirar as bolinhas  */
+
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 24px;
+    transition: all 250ms linear 0s;
+    /* transicao linear que vai de 2550 para linear 0s */
+}
+
+header nav ul li a:hover {
+    background: rgba(255,255,255,0.15)
+    /* se colocar 0 de opacity, fica tudo branco */
+}
+
+header .container img {
+    height: 30px;
+}
+/* Quando usar flexbox ou grid */
+/* flexbox fica somente em coluna ou linha */
+/* Quanto mais elementos usar, usar o grid */
+/* https://dev.to/codecasts/grid-para-layout-flexbox-para-componentes-gb3 */
+
+/* MAIN */
+/* a main é a introducao do site. */
+main {
+    margin-bottom: 100px;
+}
+
+main .container-main{
+    display: flex;
+    /* quero responsivo, por isso flex */
+    align-items: center;
+    justify-content: space-between;
+    max-width: 980px;
+    margin: 100px auto 0px auto;
+}
+
+h2{
+    color: rgb(0,0,0);
+    font-size: 45px;
+    /* para deixar colado um no outro */
+    line-height: 50px;
+    font-weight: bold;
+}
+
+h3{
+    color: rgb(131,131,131);
+    font-size: 20px;
+    line-height: 28px;
+    margin: 10px 0;
+}
+
+/* estilizar o form */
+
+form{
+    margin-top: 20px;
+}
+
+form input {
+    width: 300px;
+    padding-left: 15px;
+    font-size: 18px;
+    height: 45px;
+    border-radius: 20px;
+    border: 2px solid #0080ed;
+}
+/* o type especifica qual o valor do atributo procurado com a formatacao */
+form [type="submit"] {
+    background-color: #0080ed;
+    color: white;
+}
+
+form [type="submit"]:hover {
+    cursor: pointer;
+    /* especifica que o curso vira pointer */
+}
+
+main .container-main img{
+    width: 600px;
+}
+
+/* CARDS */
+
+.cards {
+    width: 90%;
+    max-width: 980px;
+    margin: auto;
+    display: grid;
+/* vamos usar o grid */
+    /* grid-template-columns: repeat( auto-fit, minmax(250px, 1fr)); */
+    /* nao estao ajustados coma configuracao acima */
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    /* ja comecou uma distancia */
+}
+
+.text-medium{
+    font-size: 16px ;
+    line-height: 26px;
+    font-weight: 400;
+    color: rgb(187,185,185);
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px -4px #000000;
+    transition: all 0.3s ease 0s;
+    /* regula como será a sombra no elemento */
+}
+
+.card:hover{
+    transform: translateY(-7px);
+    /* o translatey faz ele ir para cima */
+}
+
+.image {
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    /* oculto para que nao atrapalhe a visualizacao */
+    position: relative;
+    /* é relativa ao pai, div card */
+}
+
+.image img{
+    /* lembrar que temos a div .image com a img */
+    position: absolute;
+    /* ele é absoluto pois segue o relative do pai */
+    border-radius: 10px;
+    /* image proportion */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* move o elemento a partir da sua posicao. */
+}
+
+.content {
+    margin: 20px;  
+}
+
+.title{
+    margin-bottom: 0px;
+}
+
+.desafio{
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    align-items: center;
+    border: 1px solid black;
+    margin: 100px auto;
+    /* nao aparece a borda pois tem 100vh */
+    max-width: 980px;
+}
+/* primeiro criamos todas as secçoes e depois usamos */
