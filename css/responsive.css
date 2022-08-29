@@ -34,24 +34,78 @@
 }
 
 @media (max-width: 630px){
-    nav {
-        display: none;
+   
+    .menu-button-container {
+        display: flex;
+        /* aparecer no lugar proprio, pega a label */
     }
+
+    .menu {
+        position: absolute;
+        /* nao desce junto com o scroll */
+        margin-top: 30px;
+        /* ficar embaixo do botao */
+        flex-direction: column;
+        /* vai usar a coluna inteira */
+        width: 100vw;
+        /* para usar na altura uso vh e na largura vw da viewport */
+        /* a tela inteira pois facilitar */
+        justify-content: center;
+        align-items: center ;
+        left: 100%;
+        transform: translateX(100vw);
+        transition: 0.5s ease transform;
+        /* que ele venha da minha esquerda, na width e ocupe 100 */
+        /* para vir proximo a minha leitura */
+    }
+    /* abaixo defino todos os lis abaixo de menu */
+    .menu>li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0px;
+        width: 100%;
+        color: white;
+        background-color: #0080ed;
+        border-radius: 5px;
+    }
+
+    /* cada borda vai ter uma borda, nao vai ter a propriedade */
+    .menu>li:not(:last-child){
+        border-bottom: 1px solid white;
+    }
+    
+    /* os botoes devem ocupar todo o espaço */
+    .menu li a {
+        flex: 1;
+        /* ele ocupa todo espaco disponivel */
+        text-align: center;
+        /* preciso alinhar no link */
+
+    }
+    nav.menu{
+        width: 100%;
+    }
+
+    #checkbox-menu:checked ~ nav .menu {
+        /* esta na escala */
+        transform: translateX(-100vw);
+        transition: 0.5s ease transform;
+    }
+
+
+
+
+
+
+   
+   
+   
+   
     main .container-menu img{
         display: none;
     }
-    .container-menu{
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    #checkbox-menu{
-        position: absolute;
-        opacity: 0;
-        /* quero tirar o checkbox e so aparece o span */
-    }
+     
     label{
         cursor: pointer;
         position: relative;
