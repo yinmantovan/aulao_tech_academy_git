@@ -64,6 +64,10 @@ header nav ul li a:hover {
 header .container img {
     height: 30px;
 }
+
+#checkbox-menu{
+    display: none;
+}
 /* Quando usar flexbox ou grid */
 /* flexbox fica somente em coluna ou linha */
 /* Quanto mais elementos usar, usar o grid */
