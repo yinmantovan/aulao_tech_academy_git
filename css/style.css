@@ -11,7 +11,7 @@
 html,
 body {
     /* definir que o tamanho da altura seja do viewport, visao */
-    height: 100vh;
+    /* height: 100vh; retirar pois ja definimos tudo. */
     font-family: "Source Sans Pro", 'Times New Roman';
     /*Uso de uma fonte e uma fonte de callback quando nao funciona  */
     /* ajuda ao texto ficar com facilidade de renderizar */
@@ -119,13 +119,23 @@ form input {
 }
 /* o type especifica qual o valor do atributo procurado com a formatacao */
 form [type="submit"] {
+    /* dimininuir o tabamnho do botao */
     background-color: #0080ed;
     color: white;
+    width: 150px;
+    padding-left: 0px;
+    /* o padding serve somente, porque ja temos padding no input anterior */
+    font-size: 16px;
+    height: 40px;
 }
 
 form [type="submit"]:hover {
     cursor: pointer;
     /* especifica que o curso vira pointer */
+    background-color: rgba(0,128,237,0.75);
+    /* Mudar o alfa, o bota indica quando passo por cima  */
+    transform: translateY(-2px);
+    /* facilitar a experienca do usuario, para o botao. */
 }
 
 main .container-main img{
@@ -133,6 +143,11 @@ main .container-main img{
 }
 
 /* CARDS */
+
+/* adicionar link para o a */
+a {
+    text-decoration: none;
+}
 
 .cards {
     width: 90%;
@@ -161,6 +176,8 @@ main .container-main img{
     box-shadow: 5px 5px 15px -4px #000000;
     transition: all 0.3s ease 0s;
     /* regula como será a sombra no elemento */
+    /* arrendondar borda */
+    border-radius: 10px;
 }
 
 .card:hover{
@@ -175,6 +192,10 @@ main .container-main img{
     /* oculto para que nao atrapalhe a visualizacao */
     position: relative;
     /* é relativa ao pai, div card */
+    /* addicionar a borda na imagem somente em cima */
+    border-radius: 10px 10px 0 0;
+    height: 225px;
+
 }
 
 .image img{
