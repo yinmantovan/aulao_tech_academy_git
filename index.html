@@ -27,29 +27,29 @@
                         <span></span>
                         <span></span>
                     </label>
-                        <!-- estrutura navegacao -->
-                        <!-- colocamos o checkbox e o menu na mesma div -->
-                        <nav>
-                            <!-- vamos adicionar uma classe para a lista -->
-                            <!-- pois ai é possivel alterar dinamico -->
-                            <ul class="menu">
-                                <li>
-                                    <a href="#">Home</a>
-                                </li>
-                                <li>
-                                    <a href="#">Artigos</a>
-                                </li>
-                                <li>
-                                    <a href="#">Contato</a>
-                                </li>
-                            </ul>
-                        </nav>
+                    <!-- estrutura navegacao -->
+                    <!-- colocamos o checkbox e o menu na mesma div -->
+                    <nav>
+                        <!-- vamos adicionar uma classe para a lista -->
+                        <!-- pois ai é possivel alterar dinamico -->
+                        <ul class="menu">
+                            <li>
+                                <a href="#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="#artigos">Artigos</a>
+                            </li>
+                            <li>
+                                <a href="#form">Contato</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
 
     </header>
-    <main>
+    <main id="home">
         <div class="container-main">
             <div>
                 <h2><span>Inscreva-se agora</span></h2>
@@ -70,38 +70,43 @@
             <img src="./images/register.webp" alt="">
         </div>
     </main>
-    <section class="cards">
+    <section id="artigos" class="cards">
         <!-- cada artigo com sua imagem relacionada -->
-        <div class="card">
-            <div class="image">
-                <img src="./images/unicornio.webp" />
-            </div>
+        <a href="https://www.startse.com/artigos/ferramentas-digitais-sao-chave-na-gestao-financeira-das-startups/">
+            <div class="card">
+                <div class="image">
+                    <img src="./images/comp.webp" />
+                </div>
 
-            <div class="content">
-                <p class="title text-medium">
-                    <!-- titulo artigo -->
-                    Com startups mais 'baratas', grandes empresas buscam aquisições
-                </p>
-                <div class="info">
-                    <p class="text--medium">57 min</p>
+                <div class="content">
+                    <p class="title text-medium">
+                        <!-- titulo artigo -->
+                        Por que ferramentas digitais são chave na gestão financeira das startups
+                    </p>
+                    <div class="info">
+                        <p class="text--medium">57 min</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="image">
-                <img src="./images/unicornio.webp" />
-            </div>
+        </a>
+        <a href="./artigos/futuro/futuro.html">
+            <div class="card">
+                <div class="image">
+                    <img src="./images/futuro.webp" />
+                </div>
 
-            <div class="content">
-                <p class="title text-medium">
-                    <!-- titulo artigo -->
-                    Com startups mais 'baratas', grandes empresas buscam aquisições
-                </p>
-                <div class="info">
-                    <p class="text--medium">57 min</p>
+                <div class="content">
+                    <p class="title text-medium">
+                        <!-- titulo artigo -->
+                        Qual o futuro das profissões na Nova Economia?
+
+                    </p>
+                    <div class="info">
+                        <p class="text--medium">57 min</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
         <div class="card">
             <div class="image">
                 <img src="./images/unicornio.webp" />
